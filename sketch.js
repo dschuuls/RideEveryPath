@@ -411,7 +411,7 @@ function hideMessage() {
 
 function drawMask() {
 	noFill();
-	stroke(0, 0o00, 255, 0.4);
+	stroke(0, 0, 255, 0.4);
 	strokeWeight(0.5);
 	rect(windowWidth * margin, windowHeight * margin, windowWidth * (1 - 2 * margin), windowHeight * (1 - 2 * margin));
 }
