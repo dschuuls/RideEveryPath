@@ -18,7 +18,6 @@ var windowX, windowY;
 let txtoverpassQuery;
 var OSMxml;
 var numnodes, numways;
-var nodes;
 var minlat = Infinity,
 	maxlat = -Infinity,
 	minlon = Infinity,
