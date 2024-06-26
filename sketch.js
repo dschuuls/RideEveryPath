@@ -150,7 +150,7 @@ const getGeoJsonData = () => {
 	datamaxlat = extent[3] - (extent[3] - extent[1]) * margin;
 	datamaxlon = extent[2] - (extent[2] - extent[0]) * margin;
 
-	httpGet(`http://localhost:3000/${dataminlat}/${dataminlon}/${datamaxlat}/${datamaxlon}`, function(res) {
+	httpGet(`http://localhost:3000/areapaths/${dataminlat}/${dataminlon}/${datamaxlat}/${datamaxlon}`, function(res) {
 
 		let data = JSON.parse(res);
 		numnodes = data.nodes.length;
@@ -178,6 +178,13 @@ const getGeoJsonData = () => {
 		});
 		mode = selectnodemode;
 		showMessage("Click on start of route");
+	})
+}
+
+const getDirections = (originLat, originLon, destinationLat, destinationLon) => {
+	httpGet(`http://localhost:3000/directions/${originLat}/${originLon}/${destinationLat}/${destinationLon}`, function(res) {
+		let data = JSON.parse(res);
+		console.log(data);
 	})
 }
 
